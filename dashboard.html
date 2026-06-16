@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENZX - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-mini" style="text-align: left; margin:0;">GENZX</div>
+            <div class="user-info">
+                <span style="font-size: 0.9rem; font-weight: 600;">Babehmodssvip</span>
+                <span class="badge-owner">OWNER</span>
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-right-from-bracket" onclick="logout()" style="color: #ff4d4d;"></i>
+            </div>
+        </div>
+
+        <!-- Dashboard Card -->
+        <div class="glass-card card-section">
+            <h3>GENZX DASHBOARD</h3>
+            <div style="display:flex; justify-content: space-between; margin-top: 15px; font-size: 0.9rem;">
+                <div>
+                    <p class="text-muted">Online Users</p>
+                    <p style="color:var(--neon-blue); font-weight:bold; font-size: 1.2rem;">0</p>
+                </div>
+                <div>
+                    <p class="text-muted">Active Connections</p>
+                    <p style="color:var(--neon-blue); font-weight:bold; font-size: 1.2rem;">0</p>
+                </div>
+            </div>
+            <hr style="border: 0.5px solid var(--glass-border); margin: 15px 0;">
+            <p class="text-muted" style="font-size: 0.8rem;">Expiration: <span style="color: white;">20/3/2300, 23:59:59</span></p>
+        </div>
+
+        <!-- World Cup Themes -->
+        <div class="card-section">
+            <div class="section-title">WORLD CUP STADIUM THEMES</div>
+            <div class="glass-card" style="padding: 15px;">
+                <button class="theme-btn active">Argentina</button>
+                <button class="theme-btn">Brazil</button>
+                <button class="theme-btn">Portugal</button>
+                <button class="theme-btn">France</button>
+                <button class="theme-btn">Germany</button>
+                <button class="theme-btn">Spain</button>
+            </div>
+        </div>
+
+        <!-- Jadwal Sholat -->
+        <div class="card-section">
+            <div class="section-title">JADWAL SHOLAT <span style="color:var(--neon-purple)">JAKARTA</span></div>
+            <div class="glass-card">
+                <p style="text-align:center; font-size: 0.8rem; color: var(--text-muted);">MENUJU SUBUH</p>
+                <h2 style="text-align:center; color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue);" id="countdown-subuh">07:40:51</h2>
+                <div class="grid-2" style="margin-top: 15px; font-size: 0.9rem;">
+                    <div style="display:flex; justify-content:space-between;"><span>Subuh</span> <span>04:32</span></div>
+                    <div style="display:flex; justify-content:space-between;"><span>Dzuhur</span> <span>12:08</span></div>
+                    <div style="display:flex; justify-content:space-between;"><span>Ashar</span> <span>15:30</span></div>
+                    <div style="display:flex; justify-content:space-between;"><span>Maghrib</span> <span>18:20</span></div>
+                    <div style="display:flex; justify-content:space-between;"><span>Isya</span> <span>19:33</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Berita Terkini -->
+        <div class="card-section">
+            <div class="section-title">BERITA TERKINI <span>31 Berita</span></div>
+            <div class="glass-card" style="padding: 15px;">
+                <p style="font-weight: 600; color: var(--neon-blue);">Update Sistem GENZX v2.0.14</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">20/3/2300, 10:00:00</p>
+                <hr style="border: 0.5px solid var(--glass-border); margin: 10px 0;">
+                <p style="font-weight: 600; color: var(--neon-blue);">Tips Maksimalin Performa MantaX</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">19/3/2300, 08:30:00</p>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card-section">
+            <div class="section-title">QUICK ACTIONS</div>
+            <div class="grid-2">
+                <button class="btn-primary" style="font-size: 0.8rem;" onclick="window.location.href='tabungan.html'">TabunganKu</button>
+                <button class="btn-primary" style="font-size: 0.8rem;">Manage Duit</button>
+            </div>
+        </div>
+
+        <!-- Connect With Us -->
+        <div class="card-section">
+            <div class="section-title">CONNECT WITH GENZX TEAM</div>
+            <div class="glass-card" style="display: flex; justify-content: space-around; font-size: 1.5rem;">
+                <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-solid fa-heart" style="color: var(--neon-purple);"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Dummy -->
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="bug-menu.html" class="nav-item">
+            <i class="fa-solid fa-bug"></i>
+            <span>Bug</span>
+        </a>
+        <a href="tools.html" class="nav-item">
+            <i class="fa-solid fa-toolbox"></i>
+            <span>Tools</span>
+        </a>
+        <a href="music.html" class="nav-item">
+            <i class="fa-solid fa-music"></i>
+            <span>Music</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Profil</span>
+        </a>
+    </div>
+
+    <script>
+        // Fungsi Logout
+        function logout() {
+            if(confirm('Yakin mau logout?')) {
+                localStorage.removeItem('genzx_logged_in');
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Dummy Countdown Timer Subuh
+        let time = 7 * 3600 + 40 * 60 + 51; // 07:40:51 in seconds
+        setInterval(() => {
+            time--;
+            if(time < 0) time = 0;
+            const h = String(Math.floor(time / 3600)).padStart(2, '0');
+            const m = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+            const s = String(time % 60).padStart(2, '0');
+            document.getElementById('countdown-subuh').innerText = `${h}:${m}:${s}`;
+        }, 1000);
+    </script>
+</body>
+</html>
