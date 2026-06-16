@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENZX - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="login-container">
+        <div class="glass-card login-box">
+            <h1 class="logo-mini">GENZX</h1>
+            <p class="subtitle">Silahkan Login</p>
+            <p class="text-muted" style="text-align:center; margin-bottom:20px; font-size:0.9rem;">Welcome back Masukkan Akunmu</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" class="input-field" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" class="input-field" id="password" placeholder="Password" required>
+                    <i class="fa-solid fa-eye toggle-pass" onclick="togglePass()"></i>
+                </div>
+                <button type="submit" class="btn-primary">SIGN IN →</button>
+            </form>
+            
+            <div class="footer" style="position: relative; margin-top: 30px; text-align: center;">GENZX TEAM v2.0.14 © 2026</div>
+        </div>
+    </div>
+
+    <script>
+        function togglePass() {
+            const pass = document.getElementById('password');
+            const icon = document.querySelector('.toggle-pass');
+            if (pass.type === 'password') {
+                pass.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                pass.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            // Hardcoded validation sesuai request
+            if (user === 'Babehmodss' && pass === '426fa66366d8b6c9A1!b8973f10') {
+                localStorage.setItem('genzx_logged_in', 'true');
+                window.location.href = 'intro.html';
+            } else {
+                alert('Username atau Password salah!');
+            }
+        });
+    </script>
+</body>
+</html>
